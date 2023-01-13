@@ -327,7 +327,7 @@ DELETE FROM '. PLUGINS_TABLE .'
         {
           global $user;
 
-          if ('webmaster' == $user['status'])
+          if (isset($user['status']) && 'webmaster' == $user['status']) //TODO: check isset and --kontrol
           {
             $plugin['hasSettings'] = true;
           }
