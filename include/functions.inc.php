@@ -1669,13 +1669,13 @@ function load_language($filename, $dirname = '', $options = array())
   global $user, $language_files;
 
   // keep trace of plugins loaded files for switch_lang_to() function
-  if (!empty($dirname) && !empty($filename) && !@$options['return']
+  if (!empty($dirname) && !empty($filename) && !(@$options['return']??=false) // TODO : Değişti: değişken yok ise false olarak tanımlandı.
     && !isset($language_files[$dirname][$filename]))
   {
     $language_files[$dirname][$filename] = $options;
   }
 
-  if (!@$options['return'])
+  if (!@$options['return'] ??= false )    // TODO : Değişti: değişken yok ise false olarak tanımlandı.
   {
     $filename .= '.php';
   }
@@ -1712,7 +1712,7 @@ function load_language($filename, $dirname = '', $options = array())
     }
     $languages[] = $options['force_fallback'];
   }
-  if (!@$options['no_fallback'])
+  if (!@$options['no_fallback'] ??= false )   // TODO : Değişti : değişken tanımlı değil ise false oldu.
   { // default language
     $languages[] = $default_language;
   }
@@ -1724,7 +1724,7 @@ function load_language($filename, $dirname = '', $options = array())
   $selected_language = '';
   foreach ($languages as $language)
   {
-    $f = @$options['local'] ?
+    $f = (@$options['local']??= false) ?    // TODO : Değişti : değişken tanımlı değil ise false oldu.
       $dirname.$language.'.'.$filename:
       $dirname.$language.'/'.$filename;
 
@@ -1749,7 +1749,7 @@ function load_language($filename, $dirname = '', $options = array())
       // load language content
       @include($source_file);
       $load_lang = @$lang;
-      $load_lang_info = @$lang_info;
+      $load_lang_info = @$lang_info ??= null;   // TODO : Değişti : if not defined -->> defined null
 
       // access already existing values
       global $lang, $lang_info;
