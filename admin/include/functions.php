@@ -599,6 +599,7 @@ function get_fs_directories($path, $recursive = true)
       'thumbnail', 'pwg_high',
       'pwg_representative',
       'pwg_format',
+        '@eaDir',       // TODO : Eklendi: add acdsee backup folder
       )
     );
   $exclude_folders = array_flip($exclude_folders);
@@ -2374,7 +2375,7 @@ function cat_admin_access($category_id)
 
   // $filter['visible_categories'] and $filter['visible_images']
   // are not used because it's not necessary (filter <> restriction)
-  if (in_array($category_id, @explode(',', $user['forbidden_categories'])))
+  if (in_array($category_id, explode(',', $user['forbidden_categories'] ?? '')))    // TODO : değişti: Null check
   {
     return false;
   }
@@ -3379,7 +3380,7 @@ function number_format_human_readable($numbers)
     $decimals = 0;
   }
 
-  return number_format($numbers, $decimals).$readable[$index];
+  return number_format($numbers ?? 0 , $decimals).$readable[$index];    // TODO : Değişti : Null check -> 0
 }
 
 /**
