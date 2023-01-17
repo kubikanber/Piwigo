@@ -112,6 +112,7 @@ class Template
     $this->smarty->registerPlugin('modifier', 'intval', 'intval');  // TODO : add modifier , gelen uyarıya göre eklendi
     $this->smarty->registerPlugin('modifier','htmlspecialchars', 'htmlspecialchars');  // TODO : add modifier , gelen uyarıya göre eklendi
     $this->smarty->registerPlugin('modifier', 'sprintf', 'sprintf');  // TODO : add modifier , gelen uyarıya göre eklendi
+    $this->smarty->registerPlugin('modifier', 'ucfirst', 'ucfirst');  // TODO : add modifier , gelen uyarıya göre eklendi
     $this->smarty->registerPlugin('block', 'html_head', array($this, 'block_html_head') );
     $this->smarty->registerPlugin('block', 'html_style', array($this, 'block_html_style') );
     $this->smarty->registerPlugin('function', 'combine_script', array($this, 'func_combine_script') );
