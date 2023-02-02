@@ -17,7 +17,7 @@ var light_album_manager = {$light_album_manager};
 
 var x_nb_subcats = "{'%d sub-albums'|@translate}";
 var x_nb_images = "{'%d photos'|@translate}";
-var x_nb_sub_photos = "{'%d lineage pictures'|@translate}";
+var x_nb_sub_photos = "{'%d pictures in sub-albums'|@translate}";
 
 var delay_autoOpen = {$delay_before_autoOpen}
 {/footer_script}
@@ -550,7 +550,6 @@ input[name="position"] {
   position: absolute;
   display: none;
   flex-direction: column;
-  background: linear-gradient(130deg, white 0%, white 100%);
   right: 50%;
   top: 30px;
   width: max-content;
@@ -569,7 +568,6 @@ input[name="position"] {
   transform: rotate(0);
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent white transparent;
 }
 
 .badge-dropdown span {
