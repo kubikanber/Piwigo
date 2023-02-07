@@ -543,10 +543,11 @@ label>p.group_select {
   color: #353535 !important;
   background-color: #252525 !important;
   border: none !important;
+  outline: none;
 }
 
 #addGroupNameInput::placeholder {
-  color: #777 !important;
+  color: #bbb;
 }
 
 .groups .AddUser .icon-user-add::before{
@@ -1738,6 +1739,9 @@ li.plupload_delete a:hover {background: url("images/cancelhover.svg")!important;
 
 .selectedAlbum span a{
   color: #777 !important;
+}
+.selectedAlbum span {
+  background-color: #343434;
 }
 
 .AddUserErrors, .update-user-fail {
