@@ -3560,7 +3560,7 @@ function get_piwigo_news($start, $count)
     {
       $all_news = array();
 
-      $topics = json_decode($content, true);
+      $topics[] = json_decode($content, true)?? ""; // todo: array declaration + null check
 
       foreach ($topics as $idx => $topic)
       {
