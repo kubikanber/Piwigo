@@ -115,6 +115,7 @@ class Template
     $this->smarty->registerPlugin('modifier', 'ucfirst', 'ucfirst');  // TODO : add modifier , gelen uyarıya göre eklendi
     $this->smarty->registerPlugin('modifier', 'constant', 'constant');  // TODO : add modifier , gelen uyarıya göre eklendi
     $this->smarty->registerPlugin('modifier', 'file_exists', 'file_exists');  // TODO : add modifier , gelen uyarıya göre eklendi
+    $this->smarty->registerPlugin('modifier', 'json_encode', 'json_encode');  // TODO : add modifier , gelen uyariya göre
     $this->smarty->registerPlugin('block', 'html_head', array($this, 'block_html_head') );
     $this->smarty->registerPlugin('block', 'html_style', array($this, 'block_html_style') );
     $this->smarty->registerPlugin('function', 'combine_script', array($this, 'func_combine_script') );
