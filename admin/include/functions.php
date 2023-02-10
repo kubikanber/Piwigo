@@ -3560,20 +3560,24 @@ function get_piwigo_news($start, $count)
     {
       $all_news = array();
 
-      $topics[] = json_decode($content, true)?? ""; // todo: array declaration + null check
+      $topics = json_decode($content, true);
 
-      foreach ($topics as $idx => $topic)
-      {
-        $news = array(
-          'id' => $topic['topic_id'],
-          'subject' => $topic['subject'],
-          'posted_on' => $topic['posted_on'],
-          'posted' => format_date($topic['posted_on']),
-          'url' => $forum_url.'/viewtopic.php?id='.$topic['topic_id'],
-        );
+        if (!is_null($topics))  // todo: null check not devam...
+        {
+            foreach ($topics as $idx => $topic)
+            {
+                $news = array(
+                    'id' => $topic['topic_id'],
+                    'subject' => $topic['subject'],
+                    'posted_on' => $topic['posted_on'],
+                    'posted' => format_date($topic['posted_on']),
+                    'url' => $forum_url.'/viewtopic.php?id='.$topic['topic_id'],
+                    );
 
-        $all_news[] = $news;
-      }
+                $all_news[] = $news;
+            }
+        }
+
 
       if (mkgetdir(dirname($cache_path)))
       {
