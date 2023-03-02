@@ -131,7 +131,7 @@ WHERE '.$where.'
       $row['icon_ts'] = get_icon($row['max_date_last'], $child_date_last);
     }
     $cats[] = $row;
-    if ($row['id']==@$page['category']['id']) //save the number of subcats for later optim
+    if (array_key_exists('category',$page) && $row['id']==@$page['category']['id']) //save the number of subcats for later optim // TODO: check array exists eklendi.
       $page['category']['count_categories'] = $row['count_categories'];
   }
   usort($cats, 'global_rank_compare');
