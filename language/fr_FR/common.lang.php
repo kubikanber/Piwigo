@@ -7,7 +7,7 @@
 // +-----------------------------------------------------------------------+
 /*
 Language Name: Français [FR]
-Version: auto
+Version: 13.6.0
 Language URI: http://piwigo.org/ext/extension_view.php?eid=421
 Author: Piwigo team
 Author URI: http://piwigo.org

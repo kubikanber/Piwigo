@@ -7,7 +7,7 @@
 // +-----------------------------------------------------------------------+
 /*
 Language Name: Estonian [EE]
-Version: 13.5.0
+Version: 13.6.0
 Language URI: http://piwigo.org/ext/extension_view.php?eid=569
 Author: Piwigo team
 Author URI: http://piwigo.org

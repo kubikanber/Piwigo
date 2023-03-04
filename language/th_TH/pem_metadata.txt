@@ -1,4 +1,4 @@
 File automatically created from SVN or Git repository.
 
-URL: https://github.com/Piwigo/Piwigo/tags/13.5.0/language/th_TH 
-Revision: 16228
+URL: https://github.com/Piwigo/Piwigo/tags/13.6.0/language/th_TH 
+Revision: 16286
