@@ -1331,3 +1331,11 @@ $lang['%s editions'] = '%s sürüm';
 $lang['%s login'] = '%s giriş';
 $lang['%s other tags available...'] = '%s başka etiket mevcut...';
 $lang['Rename Tag'] = 'Etiketi Yeniden Adlandır';
+$lang['Loading... %d1/%d2 processed photos'] = 'Yükleniyor... %d1/%d2 işlenmiş fotoğraf';
+$lang['There is an error with the API'] = 'API ile ilgili bir hata var';
+$lang['Tag successfully generated and added'] = 'Etiket başarıyla oluşturuldu ve eklendi';
+$lang['Applies auto-generated tags to images'] = 'resimlere otomatik olarak oluşturulan etiketleri uygular';
+$lang['Maximum number of tags'] = 'Maksimum etiket sayısı';
+$lang['Language code'] = 'Dil kodu';
+$lang['Tag Recognition'] = 'Etiket Tanıma';
+
