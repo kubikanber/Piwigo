@@ -422,7 +422,7 @@ foreach ($file_extensions as $ext => $ext_details)
   }
 
   @$file_extensions_of[$type][strtoupper($ext)] = $ext_details['ext_counter'];
-  @$data_storage[$type]; // TODO : önceden tanımlama için
+  array_key_exists($type , @$data_storage) ? null : @$data_storage[$type] = null; // TODO : önceden tanımlama için
   @$data_storage[$type] += $ext_details['filesize'];
 }
 
