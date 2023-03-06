@@ -736,6 +736,7 @@ function get_related_categories_menu($items, $excluded_cat_ids=array())
   {
     foreach (explode(',', $cat['uppercats']) as $uppercat)
     {
+      @$cat_ids[$uppercat]??=0; //TODO: Eklendi if not defined --> defined 0
       @$cat_ids[$uppercat]++;
     }
   }
@@ -792,10 +793,11 @@ SELECT
     // 3. number of sub-albums containing photos
     //
     // Option 3 seems more appropriate here.
-    if (!empty($cat['id_uppercat']) and @$cats[$idx]['count_images'] > 0)
+    if (!empty($cat['id_uppercat']) and array_key_exists('count_images' , @$cats[$idx]) and @$cats[$idx]['count_images'] > 0) //TODO: eklendi array key check
     {
       foreach (array_slice(explode(',', $cat['uppercats']), 0, -1) as $uppercat_id)
       {
+        @$cats[ $index_of_cat[ $uppercat_id ] ]['count_categories']??=0;  //TODO: Eklendi if not defined --> defined 0
         @$cats[ $index_of_cat[ $uppercat_id ] ]['count_categories']++;
       }
     }
