@@ -1326,3 +1326,6 @@ $lang['Ok'] = 'Tamam';
 $lang['Variation'] = 'Varyasyon';
 $lang['Consensus deviation'] = 'Fikir birliği sapması';
 $lang['path'] = 'yol';
+$lang['System'] = 'Sistem';
+$lang['%s editions'] = '%s sürüm';
+$lang['%s login'] = '%s giriş';
