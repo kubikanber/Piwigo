@@ -1330,3 +1330,4 @@ $lang['System'] = 'Sistem';
 $lang['%s editions'] = '%s sürüm';
 $lang['%s login'] = '%s giriş';
 $lang['%s other tags available...'] = '%s başka etiket mevcut...';
+$lang['Rename Tag'] = 'Etiketi Yeniden Adlandır';
