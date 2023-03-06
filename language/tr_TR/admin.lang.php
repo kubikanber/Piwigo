@@ -1338,4 +1338,4 @@ $lang['Applies auto-generated tags to images'] = 'resimlere otomatik olarak olu�
 $lang['Maximum number of tags'] = 'Maksimum etiket sayısı';
 $lang['Language code'] = 'Dil kodu';
 $lang['Tag Recognition'] = 'Etiket Tanıma';
-
+$lang['No filter, add one'] = 'Filtre yok, bir tane ekle';
