@@ -823,9 +823,9 @@ class Template
 
     $this->scriptLoader->add( $params['id'], $load,
       empty($params['require']) ? array() : explode( ',', $params['require'] ),
-      @$params['path'],
+      array_key_exists('path' , @$params) ? @$params['path'] : null,  // TODO: eklendi is array key defined
         $params['version'] ?? 0,
-      @$params['template'] ??= null); // TODO : Değişti : if not defined -->> null & code improvement(#816)
+      array_key_exists('template' , @$params) ? @$params['template'] : null); // TODO : Değişti : if not defined -->> null & code improvement(#816)
   }
 
   /**
