@@ -1322,3 +1322,4 @@ $lang['Some photos are missing from your file system. Details provided by plugin
 $lang['%d pictures in sub-albums'] = 'alt albümlerde %d resim';
 $lang['<b>%d</b> filtered user'] = '<b>%d</b> filtrelenmiş kullanıcı';
 $lang['<b>%d</b> filtered users'] = '<b>%d</b> filtrelenmiş kullanıcılar';
+$lang['Ok'] = 'Tamam';
