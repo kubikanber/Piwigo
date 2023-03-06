@@ -161,7 +161,7 @@ $user_options = array(
   );
 
 $template->assign('user_options', $user_options );
-$template->assign('user_options_selected', array(@$_GET['users']) );
+$template->assign('user_options_selected', (array_key_exists('users' , @$_GET) ? array(@$_GET['users']) : null) );  // TODO: eklendi is array key defined
 $template->assign('ADMIN_PAGE_TITLE', l10n('Rating'));
 
 $query = '
