@@ -42,6 +42,7 @@ function parse_sort_variables(
     $url = $base_url;
     $disp = '↓'; // TODO: an small image is better
 
+    array_key_exists($get_param , @$_GET) ? null : @$_GET[$get_param] = null; // TODO: önceden tanımlama için
     if ( $field !== @$_GET[$get_param] )
     {
       if ( !isset($default_field) or $default_field!=$field )
