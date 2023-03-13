@@ -1344,3 +1344,7 @@ $lang['Yes change parent anyway'] = 'Evet yine de ebeveyni değiştir';
 $lang['No, don\'t move this album here'] = 'Hayır, bu albümü buraya taşıma';
 $lang['Rename album'] = 'Albümü yeniden adlandır';
 $lang['Supprimer l\'album : tatatatattata'] = 'Albümü Ekleyin : tatatatattata';
+$lang['Enter a term to search for album'] = 'Albüm aramak için bir terim girin';
+$lang['Numeric identifier'] = 'Sayısal tanımlayıcı';
+$lang['Publication'] = 'Yayınlama';
+$lang['A photo can receive comments from your visitors if it belongs to an album with comments activated.'] = 'Bir fotoğraf, yorumların etkinleştirildiği bir albüme aitse ziyaretçilerinizden yorum alabilir.';
