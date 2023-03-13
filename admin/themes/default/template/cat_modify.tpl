@@ -398,7 +398,7 @@ function cropImage() {
       <li id="IMAGES_RECURSIVE"><label class="font-checkbox"><span class="icon-dot-circled"></span><input type="radio" name="photo_deletion_mode" value="no_delete" checked="checked">{'delete only album, not photos'|translate}</label></li>
     </ul>
     <p class="popin-actions">
-      <a id="deleteConfirm" class="buttonLike" type="submit" href="{$U_DELETE}"><i class="icon-trash"></i> {'Confirm deletion'|translate}</button>
+      <button id="deleteConfirm" class="buttonLike" type="submit" href="{if isset($U_DELETE)}{$U_DELETE}{else}{''}{/if}"><i class="icon-trash"></i> {'Confirm deletion'|translate}</button>   {*// TODO : Değişti : Button oldu && check *}
       <a class="icon-cancel-circled close-delete_popin" href="#">{'Cancel'|translate}</a>
     </p>
   </div>
